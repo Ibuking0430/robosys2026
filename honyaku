@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+import sys
+
+en_to_ja = {
+    "apple": "りんご",
+    "book": "本",
+    "cat": "猫",
+    "dog": "犬",
+    "hello": "こんにちは",
+    "goodbye": "さようなら",
+    "water": "水",
+    "school": "学校",
+    "computer": "コンピュータ",
+    "robot": "ロボット",
+    "student": "学生",
+    "friend": "友達",
+    "car": "車",
+    "house": "家",
+    "music": "音楽"
+}
+
+ja_to_en = {value: key for key, value in en_to_ja.items()}
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: translate en-ja or ja-en", file=sys.stderr)
+        sys.exit(1)
+
+    mode = sys.argv[1]
+
+    if mode == "en-ja":
+        dictionary = en_to_ja
+    elif mode == "ja-en":
+        dictionary = ja_to_en
+    else:
+        print("Error: use en-ja or ja-en", file=sys.stderr)
+        sys.exit(1)
+
+    for line in sys.stdin:
+        words = line.strip().split()
+        translated = [dictionary.get(word.lower(), word)
+                      for word in words]
+        print(" ".join(translated))
+
+if __name__ == "__main__":
+    main()

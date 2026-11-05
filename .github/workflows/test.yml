@@ -12,5 +12,7 @@ jobs:
       uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
-    - name: All test
+    - name: Test plus
       run: bash -xv ./test.bash
+    - name: Test honyaku
+      run: bash -xv ./test_honyaku.bash
