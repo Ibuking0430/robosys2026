@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 羽山昂希
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 
 en_to_ja = {

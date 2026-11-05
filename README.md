@@ -30,3 +30,8 @@ echo "りんご 本" | ./honyaku ja-en
 
 bash -xv ./test.bash
 bash -xv ./test_honyaku.bash
+
+## ライセンス
+
+このプログラムはBSD-3-Clauseライセンスの下で公開しています。
+詳細はLICENSEファイルを確認してください。
