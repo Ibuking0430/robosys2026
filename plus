@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import sys
 
 x = 0                     #もともと0.0だったのを0に変更
